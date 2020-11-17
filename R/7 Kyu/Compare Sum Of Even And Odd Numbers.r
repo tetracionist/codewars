@@ -8,12 +8,12 @@ even_or_odd <- function(s){
   sumo <- sum(subset(v, !v %% 2 == 0))
 
   if (sume > sumo){
-    if{print("Even is greater than Odd")}
+    print("Even is greater than Odd")
   }else if (sumo > sume){
       print("Odd is greater than Even")
   }else{
       print("Even and Odd are the same")
-      }
+  }
   # alternative case statement commented out as 
   # it does not work with the version of R  
   # that codewars uses
