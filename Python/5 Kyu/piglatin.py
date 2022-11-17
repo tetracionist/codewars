@@ -1,15 +1,14 @@
 # In response to https://www.codewars.com/kata/520b9d2ad5c005041100000f
 
-def pig_it(text):
+import string, re
 
-    string=""
-    for i in text.split():
-        if i == "?":
-            string=string + " "+"?"
-        elif i == "!":
-            string=string + " "+"!"
+def pig_it(text):
+    translated_text = []
+    for word in text.split(" "):
+        if re.match('^[a-zA-Z0-9]*$',word):
+            translated_text.append(f"{word[1:]}{word[0]}ay")
         else:
-            string=string + " "+i[1:]+i[0]+"ay"
-            print(string)
+            translated_text.append(word)
             
-    return string.strip()
+    return ' '.join(translated_text)
+            
